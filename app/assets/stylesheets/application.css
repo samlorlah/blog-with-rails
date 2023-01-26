@@ -13,3 +13,99 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+  padding: 20px;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 100px;
+  gap: 15px;
+}
+
+.users-list a {
+  text-decoration: none;
+  color: #000;
+}
+
+.user-card-container {
+  display: flex;
+  gap: 20px;
+}
+
+.username-and-posts {
+  border: 1px solid #000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 25px;
+}
+
+.bio-container {
+  border: 1px solid #000;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.posts-container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.single-post {
+  border: 1px solid #000;
+  margin: 10px 0;
+  padding: 10px;
+  display: flow-root;
+}
+
+.single-post span {
+  float: right;
+}
+
+.single-post a {
+  text-decoration: none;
+  color: #000;
+}
+
+.all-posts-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.all-posts-btn a button {
+  padding: 15px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.comments-cont {
+  border: 1px solid #000;
+  width: 80%;
+  padding: 15px;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-container,
+.comments-list-container {
+  border: 1px solid #000;
+  padding: 15px;
+}
