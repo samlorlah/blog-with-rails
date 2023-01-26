@@ -9,7 +9,7 @@
   </div>
   <ul class="comments-list-container">
     <% if @post.comments_counter > 0%>
-        <%@post.five_recent_comments.each do |comment|%>
+        <%@post.comments.each do |comment|%>
         <li><%= comment.text %></li>
         <%end%>
       <%else%>
