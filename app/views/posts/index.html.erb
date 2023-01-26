@@ -1,0 +1,27 @@
+<section>
+  <%= render 'shared/user', user:@user %>
+  <ul>
+    <% @posts.each do |post|%>
+      <li>
+        <a href="/users/<%= @user.id %>/posts/<%= post.id %>">
+          <div class="post-cont">
+            <%= render 'shared/post', {user: @user, post: post} %>
+            <ul class="comments-cont">
+              <% if post.comments_counter > 0%>
+                <%post.five_recent_comments.each do |comment|%>
+                <li><%= comment.text %></li>
+                <%end%>
+              <%else%>
+                <li>No comment<li>
+              <%end%>
+            <ul>
+          </div>
+        </a>
+      </li>
+    <%end%>
+  </ul>
+
+  <div class="all-posts-btn">
+    <a href="#"><button type="button">Pagination</button></a>
+  </div>
+</section>
