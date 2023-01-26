@@ -1,0 +1,18 @@
+<section>
+  <div class="post-container">
+    <div class="post-header">
+      <h3><%= @post.title%> By <%= @post.author.name%></h3>
+      <span>Comments: <%= @post.comments_counter%>, Likes: <%= @post.likes_counter %></span>
+    </div>
+    <p><%= @post.text%></p>
+  </div>
+  <ul class="comments-list-container">
+    <% if @post.comments_counter > 0%>
+        <%@post.five_recent_comments.each do |comment|%>
+        <li><%= comment.text %></li>
+        <%end%>
+      <%else%>
+        <li>No comment<li>
+      <%end%>
+  </ul>
+</section>
