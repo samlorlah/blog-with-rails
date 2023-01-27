@@ -6,14 +6,21 @@
       <span>Comments: <%= @post.comments_counter%>, Likes: <%= @post.likes_counter %></span>
     </div>
     <p><%= @post.text%></p>
+     <%= form_with url: user_post_likes_path(@post.author, @post), method: :post do |form| %>
+        <%= form.submit "Like", class:"submit-btn" %>
+      <% end %>
   </div>
   <ul class="comments-list-container">
     <% if @post.comments_counter > 0%>
-        <%@post.comments.each do |comment|%>
-        <li><%= comment.text %></li>
-        <%end%>
-      <%else%>
-        <li>No comment<li>
+      <%@post.comments.each do |comment|%>
+      <li><%= comment.text %></li>
       <%end%>
+    <%else%>
+      <li>No comment<li>
+    <%end%>
+     <%= form_with model: Comment, url: user_post_comments_path(@post.author, @post),class:'comment-form', method: :post do |form| %>
+      <%= form.text_field :text, placeholder: 'Write your comment here...', class:"comment-text-cont" %>
+      <%= form.submit "Add a comment", class:"submit-btn" %>
+    <% end %>
   </ul>
 </section>
