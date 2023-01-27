@@ -117,7 +117,7 @@ Feel free to check the [issues page](../../issues/).
 ## ⭐️ Show your support <a name="support"></a>
 
 > Give a ⭐️ if you like this project!
-If you like this project, please give a ⭐️.
+- If you like this project, please give a ⭐️.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
