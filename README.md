@@ -117,12 +117,14 @@ Feel free to check the [issues page](../../issues/).
 ## ⭐️ Show your support <a name="support"></a>
 
 > Give a ⭐️ if you like this project!
+If you like this project, please give a ⭐️.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 > Hat tip to anyone whose code was used
+- I would like to thank all my team members in Microverse
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
