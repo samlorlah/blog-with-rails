@@ -19,7 +19,7 @@ RSpec.describe 'user/#index', type: :feature do
     end
 
     it 'Redirects to user show page when a user is clicked' do
-      user = @users.first()
+      user = @users.first
       find("a[href='#{user_path(user.id)}']").click
       expect(current_path).to match user_path(user.id)
     end

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'user/#index', type: :feature do
   before :each do
-    @user = User.first()
+    @user = User.first
     visit user_path(@user.id)
   end
   describe 'users show view' do
@@ -16,16 +16,16 @@ RSpec.describe 'user/#index', type: :feature do
       expect(page).to have_content("Number of posts: #{@user.post_counter}")
     end
     it 'should show the user bio' do
-      expect(page).to have_content "Bio"
+      expect(page).to have_content 'Bio'
     end
     it 'should show the user first 3 posts' do
       @user.last_three_posts.each { |post| expect(page).to have_content(post.title) }
     end
     it "should have button to view all user's post" do
-      expect(page). to have_button('See all posts')
+      expect(page).to have_button('See all posts')
     end
     it "should redirect to post's show page" do
-      post = @user.posts.first()
+      post = @user.posts.first
 
       find("a[href='#{user_post_path(@user.id, post.id)}']").click
       expect(current_path).to match user_post_path(@user.id, post.id)
