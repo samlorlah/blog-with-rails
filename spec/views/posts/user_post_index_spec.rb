@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'user_posts/#index', type: :feature do
   before :each do
-    @user = User.first()
+    @user = User.first
     visit user_posts_path(@user.id)
   end
   describe 'Users Posts index view' do
@@ -29,8 +29,8 @@ RSpec.describe 'user_posts/#index', type: :feature do
       post = @user.posts.first
       expect(page).to have_content("Comments: #{post.comments_counter}")
     end
-    it "should have button for pagination" do
-      expect(page). to have_button('Pagination')
+    it 'should have button for pagination' do
+      expect(page).to have_button('Pagination')
     end
   end
 end

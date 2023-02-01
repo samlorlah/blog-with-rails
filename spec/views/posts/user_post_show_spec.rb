@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'user_post/#show', type: :feature do
   before :each do
-    @user = User.first()
+    @user = User.first
     @post = @user.posts.first
     visit user_post_path(@user.id, @post.id)
   end
