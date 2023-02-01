@@ -97,6 +97,11 @@ To run tests, run the following command:
 - Twitter: [@samlorlah](https://twitter.com/samlorlah)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/muyiwa-fawole)
 
+👤 **Faranosh Amini**
+- GitHub: [@FaranoshAmini](https://github.com/FaranoshAmini)
+- Twitter: [@Faranosh_Amini](https://twitter.com/Faranosh_Amini) 
+- LinkedIn: [@Faranosh_Amini](https://www.linkedin.com/in/faranosh-amini-9b925b23a/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
