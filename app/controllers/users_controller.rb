@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    if params[:id] == "null"
+    if params[:id] == 'null'
       redirect_to users_path
     else
       @user = User.find(params[:id])
