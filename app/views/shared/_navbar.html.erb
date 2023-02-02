@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Blog</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <% if user_signed_in? %>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <%= link_to "Home", root_path, class:"nav-link active" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Posts", user_posts_path(current_user.id), class:"nav-link active" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Update Profile", edit_user_registration_path, class:"nav-link active" %>
+          </li>
+        </ul>
+        <%= link_to "Sign Out", destroy_user_session_path, class:"btn btn-outline-danger",'data-turbo-method': :delete%>
+      <% else %>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <%= link_to "Home", root_path, class:"nav-link active" %>
+          </li>
+        </ul>
+        <div class="gap-3">
+          <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-outline-info" %>
+          <%= link_to "Sign In", new_user_session_path, class:"btn btn-outline-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</nav>
