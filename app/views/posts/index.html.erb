@@ -13,7 +13,12 @@
             <ul class="comments-cont">
               <% if post.comments_counter > 0%>
                 <%post.five_recent_comments.each do |comment|%>
-                <li><%= comment.text %></li>
+                <li>
+                  <%= comment.author.name %> : <%= comment.text %>
+                  <% if can? :destroy, comment  %> |  
+                    <%= link_to "Delete",comment_path(comment.id), class:"btn btn-outline-danger my-3", "data-turbo-method": :delete %></span>
+                  <% end %>
+                </li>
                 <%end%>
               <%else%>
                 <li>No comment<li>
@@ -21,6 +26,9 @@
             <ul>
           </div>
         </a>
+        <% if can? :destroy, post  %> |  
+          <%= link_to "Delete",post_path(post.id), class:"btn btn-outline-danger", "data-turbo-method": :delete %></span>
+        <% end %>
       </li>
     <%end%>
   </ul>
