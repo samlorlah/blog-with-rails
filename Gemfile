@@ -9,6 +9,8 @@ gem 'rails', '~> 7.0.4'
 gem 'rspec-rails'
 
 gem 'devise'
+gem 'devise-jwt'
+gem 'rack-cors'
 
 gem 'cancancan'
 
