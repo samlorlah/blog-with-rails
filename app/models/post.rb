@@ -13,6 +13,10 @@ class Post < ApplicationRecord
     author.increment!(:post_counter)
   end
 
+  def update_post_counter_when_post_deleted
+    author.decrement!(:post_counter)
+  end
+
   def five_recent_comments
     comments.order(created_at: :desc).last(5)
   end
