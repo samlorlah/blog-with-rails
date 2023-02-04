@@ -13,7 +13,12 @@
   <ul class="comments-list-container">
     <% if @post.comments_counter > 0%>
       <%@post.comments.each do |comment|%>
-      <li><%= comment.author.name %> : <%= comment.text %></li>
+      <li>
+        <%= comment.author.name %> : <%= comment.text %>
+        <% if can? :destroy, comment  %> |  
+          <%= link_to "Delete",comment_path(comment.id), class:"btn btn-outline-danger my-3", "data-turbo-method": :delete %></span>
+        <% end %>
+      </li>
       <%end%>
     <%else%>
       <li>No comment<li>
