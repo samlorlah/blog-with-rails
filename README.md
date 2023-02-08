@@ -97,6 +97,11 @@ To run tests, run the following command:
 - Twitter: [@samlorlah](https://twitter.com/samlorlah)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/muyiwa-fawole)
 
+👤 **Tanusri Ghosh**
+- GitHub: [@chuaindia](https://github.com/chuaindia)
+- Twitter: [@chuaghosh](https://twitter.com/chuaghosh25) 
+- LinkedIn: [@Ghosh](https://www.linkedin.com/in/tanusri-ghosh-2a56b814/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
