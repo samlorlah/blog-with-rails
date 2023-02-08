@@ -7,7 +7,7 @@
   <ul>
     <% @posts.each do |post|%>
       <li>
-        <a href="/users/<%= @user.id %>/posts/<%= post.id %>">
+        <a id="show-btn-<%=post.id%>" href=<%=user_post_path(:user_id => @user.id, :id => post.id)%>>
           <div class="post-cont">
             <%= render 'shared/post', {user: @user, post: post} %>
             <ul class="comments-cont">
