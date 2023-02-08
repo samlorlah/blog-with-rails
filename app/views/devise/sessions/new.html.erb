@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-6 offset-md-3">    
+    <h2>Log in</h2>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control mb-3", placeholder: "Username" %>
+      </div>
+
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-control mb-3", placeholder: "Password" %>
+      </div>
+
+      <div class="actions w-100">
+        <%= f.submit "Log in", class: "btn btn-primary btn-block" %>
+      </div>
+    <% end %>
+  </div>
+</div>
