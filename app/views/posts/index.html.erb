@@ -1,5 +1,8 @@
 <section>
  <h2>List of Posts</h2>
+  <button type="button" class="btn btn-info mt-3 mb-5">
+    <%= link_to "Create A Post", new_post_path(current_user.id) , class: "new-post-link" %>
+  </button>
   <%= render 'shared/user', user:@user %>
   <ul>
     <% @posts.each do |post|%>
