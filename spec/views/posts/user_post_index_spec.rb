@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe 'user_posts/#index', type: :feature do
   before :each do
     @user = User.create(name: 'John Doe',
-                          photo: 'https://dummypic.jpg',
-                          bio: 'Long text describing my bio')
+                        photo: 'https://dummypic.jpg',
+                        bio: 'Long text describing my bio')
     @first_post = Post.create(author: @user, title: 'Post 1', text: 'This is my first post')
     @second_post = Post.create(author: @user, title: 'post 2',
                                text: 'This is my second post')
@@ -47,7 +47,7 @@ RSpec.describe 'user_posts/#index', type: :feature do
     end
     it 'redirects to post show page when a post is clicked' do
       find("a[id='show-btn-#{@first_post.id}']").click
-      expect(current_path).to match user_post_path(:user_id => @user.id, :id => @first_post.id)
+      expect(current_path).to match user_post_path(user_id: @user.id, id: @first_post.id)
     end
     it 'should have button for pagination' do
       expect(page).to have_button('Pagination')
