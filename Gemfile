@@ -9,6 +9,10 @@ gem 'rails', '~> 7.0.4'
 gem 'rspec-rails'
 
 gem 'devise'
+gem 'devise-jwt'
+gem 'rack-cors'
+
+gem 'cancancan'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
